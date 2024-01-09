@@ -1,20 +1,28 @@
 "use client"
 
-import { Card, CardHeader } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Header } from "./header";
 
 interface CardWrapperProps {
-
+    children: React.ReactNode;
+    headerLabel: string;
+    showSocial: boolean;
 }
 
 const CardWrapper = ({
-
+    children,
+    headerLabel
 }: CardWrapperProps) => {
 
     return (
         <Card>
             <CardHeader>
-                
+                <Header label={headerLabel} />
             </CardHeader>
+            <CardContent>
+                {children}
+            </CardContent>
+            
         </Card>
     );
 }
