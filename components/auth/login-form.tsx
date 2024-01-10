@@ -1,14 +1,14 @@
 import CardWrapper from "./card-wrapper";
 
-interface LoginFormProps {
-    label: string;
-}
-
-export const LoginForm = ({
-}: LoginFormProps) => {
+export const LoginForm = () => {
     return (
-        <CardWrapper>
-            Login Form!
+        <CardWrapper
+            headerLabel="Welcome back"
+            backButtonLabel="Don't have an account?"
+            backButtonHref="/auth/register"
+            showSocial
+        >
+            <div>Login Form!</div>
         </CardWrapper>
     )
 }
