@@ -21,7 +21,7 @@ export const Header = ({
             )}>
                 🔐Auth
             </h1>
-            <p className='text-lg text-white'>
+            <p className='text-sm text-muted-foreground'>
                 {label}
             </p>
         </div>
