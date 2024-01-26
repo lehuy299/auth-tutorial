@@ -1,7 +1,6 @@
 import { RegisterForm } from '@/components/auth/register-form'
 
-const RegisterPage = ({
-}: RegisterFormProps) => {
+const RegisterPage = () => {
     return (
         <RegisterForm/>
     )

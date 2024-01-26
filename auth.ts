@@ -5,7 +5,10 @@ import authConfig from "./auth.config"
 
 const prisma = new PrismaClient()
 
-export const { handlers, auth } = NextAuth({
+export const { 
+  handlers: { GET, POST }, 
+  auth 
+} = NextAuth({
   adapter: PrismaAdapter(prisma),
   session: { strategy: "jwt" },
   ...authConfig,
