@@ -10,6 +10,11 @@ export const {
   signIn,
   signOut
 } = NextAuth({
+  pages: {
+    error: '/auth/error',
+    signIn: '/auth/login'
+  },
+  // events: {linkAccount},
   callbacks: {
     async session({ session, token }) {
       if (token.sub && session.user) {
